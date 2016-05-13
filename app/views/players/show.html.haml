@@ -1,7 +1,12 @@
 %p
   %b= @player.p1
   = Player.return_id(@player.p1)
-  = Player.return_summoner_champion_list(@player.p1)
+
+
+
+%p
+%b= @player.c1
+= Player.get_champion_id(@player.p1)
 
 
 %p

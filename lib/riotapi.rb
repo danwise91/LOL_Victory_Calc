@@ -27,7 +27,14 @@ def get_full_stats(summoner_id)
   stat_url = "#{BASE_URL}/api/lol/na/v1.3/stats/by-summoner/#{summoner_id}/ranked#{API_KEY}"
   parse_json(stat_url)
 end
-#the get_full_stats method will take the summoner id and return the statistics from the riot api 
+#the get_full_stats method will take the summoner id and return the statistics from the riot api
+
+
+def get_champion
+  champion_url = "#{BASE_URL}/api/lol/static-data/na/v1.2/champion#{API_KEY}"
+  parse_json(champion_url)
+end
+
 
   #httparty gem allows the application to establish a connection with a
   #third party api and parse it into json format
