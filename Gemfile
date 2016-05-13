@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "httparty"
+gem "figaro"
 gem 'haml', '4.0.6'
 gem "better_errors"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
