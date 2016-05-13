@@ -30,6 +30,29 @@ def self.get_champion_id(champ_name)
   champs["data"][champ_name]
 end
 
+#see if a summoner has played with a given champion in ranked
+def self.determine_champion_probability(summoner_name, champ_name)
+  champion_ids = return_summoner_champion_list(summoner_name).collect{|player| player["id"]}
+  desired_champ_id = get_champion_id(champ_name)
+  winrate = 0.0
+
+  if champion_ids.include?(desired_champ_id)
+    #get the desired champion array location
+    hash = Hash[champion_ids.map.with_index.to_a]
+    champ_array_location = has[desired_champ_id]
+
+    #calculate winrate
+    player_stat = return_summoner_champion_list(summoner_name)[champ_array_location]["stats"]
+    total_played = player_stat["totalSessionsPlayed"]
+    total_won = player_stat["totalSessionsWon"]
+
+    winrate = (total_won.to_f / total_played.to_f)
+    winrate.round(2) * 100
+  else
+    winrate = 0.5 * 100
+  end
+end
+
   #downcase all players names before saving
   def downcase_players
     self.p1.downcase!
