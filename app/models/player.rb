@@ -13,6 +13,14 @@ class Player < ActiveRecord::Base
     info[name]["id"]
   end
 
+#return a list of champions a given summoner has played in ranked
+  def self.return_summoner_champion_list(summoner_name)
+    id = return_id(summoner_name)
+    api = RiotApi.new
+    full_stat = api.get_full_stats(id)
+    full_stat["champions"]
+  end
+
   #downcase all players names before saving
   def downcase_players
     self.p1.downcase!

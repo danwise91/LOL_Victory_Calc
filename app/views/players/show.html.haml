@@ -1,6 +1,10 @@
 %p
   %b= @player.p1
   = Player.return_id(@player.p1)
+  = Player.return_summoner_champion_list(@player.p1)
+
+
 %p
   %b= @player.p2
   = Player.return_id(@player.p2)
+  = Player.return_summoner_champion_list(@player.p2)
