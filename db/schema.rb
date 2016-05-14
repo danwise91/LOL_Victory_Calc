@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512221454) do
+ActiveRecord::Schema.define(version: 20160513221616) do
 
   create_table "add_champions_to_players", force: :cascade do |t|
     t.string   "c1"
@@ -27,6 +27,24 @@ ActiveRecord::Schema.define(version: 20160512221454) do
     t.datetime "updated_at", null: false
     t.string   "c1"
     t.string   "c2"
+  end
+
+  create_table "tteams", force: :cascade do |t|
+    t.string   "p1"
+    t.string   "p2"
+    t.string   "p3"
+    t.string   "p4"
+    t.string   "p5"
+    t.string   "p6"
+    t.string   "c1"
+    t.string   "c2"
+    t.string   "c3"
+    t.string   "c4"
+    t.string   "c5"
+    t.string   "c6"
+    t.integer  "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
