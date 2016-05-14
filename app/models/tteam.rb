@@ -44,10 +44,7 @@ class Tteam < ActiveRecord::Base
    end
   end
 
-  def self.team_probability
-    team_winrate = Tteam.determine_champion_probability(summoner_name,champ_name) + determine_champion_probability(p2, c2), + determine_champion_probability(p3, c3)
-    team_winrate
-  end
+#instead of making a method to return the total probability for the team. You can add up the probability inside the haml code 
 
   def downcase_players
     self.p1.downcase!

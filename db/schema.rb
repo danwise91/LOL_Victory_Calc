@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160513221616) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "add_champions_to_players", force: :cascade do |t|
     t.string   "c1"
     t.string   "c2"
