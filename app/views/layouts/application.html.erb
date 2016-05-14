@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Riftodds</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>League Victory Calculator</title>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div align="center">
+  <%=image_tag("lol.png")%><br>
+</div>
+<%=stylesheet_link_tag "title_text", media: 'all'%>
+<div class="container">
+<div id=design>
+<div align="center">
+    <h1>League Victory Calculator</h1>
+  </div>
+</div>
+</div>
 
 <%= yield %>
 
 </body>
 </html>
 
-<%=link_to "1v1", root_path%> <%=link_to "3v3", tteams_path%>
+<%=link_to "1v1", root_path%> <%=link_to "Team", tteams_path%><br>
+<%= render 'layouts/footer'%>

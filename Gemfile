@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+
+gem 'bootstrap-sass', '~> 3.3.6'
 gem "httparty"
 gem "figaro"
 gem 'haml', '4.0.6'

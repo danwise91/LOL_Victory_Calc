@@ -52,6 +52,8 @@ def self.determine_champion_probability(summoner_name, champ_name)
    end
 end
 
+
+
   #downcase all players names before saving
   def downcase_players
     self.p1.downcase!

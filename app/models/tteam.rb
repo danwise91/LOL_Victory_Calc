@@ -44,8 +44,9 @@ class Tteam < ActiveRecord::Base
    end
   end
 
-  def self.determine_team_probability
-    #.......
+  def self.team_probability
+    team_winrate = Tteam.determine_champion_probability(summoner_name,champ_name) + determine_champion_probability(p2, c2), + determine_champion_probability(p3, c3)
+    team_winrate
   end
 
   def downcase_players
