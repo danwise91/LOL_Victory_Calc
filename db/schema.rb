@@ -38,14 +38,11 @@ ActiveRecord::Schema.define(version: 20160513221616) do
     t.string   "p3"
     t.string   "p4"
     t.string   "p5"
-    t.string   "p6"
     t.string   "c1"
     t.string   "c2"
     t.string   "c3"
     t.string   "c4"
     t.string   "c5"
-    t.string   "c6"
-    t.integer  "player_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

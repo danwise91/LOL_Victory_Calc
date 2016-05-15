@@ -14,6 +14,6 @@ class TteamsController < ApplicationController
 
   private
   def tteams_params
-    params.require(:tteam).permit(:p1, :p2, :p3, :p4, :p5, :p6, :c1, :c2, :c3, :c4, :c5, :c6)
+    params.require(:tteam).permit(:p1, :p2, :p3, :p4, :p5, :c1, :c2, :c3, :c4, :c5)
   end
 end

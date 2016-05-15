@@ -1,5 +1,5 @@
 class Tteam < ActiveRecord::Base
-  require 'riotsecondapi'
+  require 'riotapi'
   before_save :downcase_players
 
   before_save :mod_champ_save
@@ -44,7 +44,7 @@ class Tteam < ActiveRecord::Base
    end
   end
 
-#instead of making a method to return the total probability for the team. You can add up the probability inside the haml code 
+#instead of making a method to return the total probability for the team. You can add up the probability inside the haml code
 
   def downcase_players
     self.p1.downcase!

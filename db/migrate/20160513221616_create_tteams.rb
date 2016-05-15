@@ -6,14 +6,13 @@ class CreateTteams < ActiveRecord::Migration
       t.string :p3
       t.string :p4
       t.string :p5
-      t.string :p6
       t.string :c1
       t.string :c2
       t.string :c3
       t.string :c4
       t.string :c5
-      t.string :c6
-      t.integer :player_id 
+
+
 
       t.timestamps null: false
     end
