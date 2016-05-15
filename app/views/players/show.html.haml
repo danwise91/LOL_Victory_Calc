@@ -1,16 +1,19 @@
 %p
+  player:
   %b= @player.p1
+  id:
   = Player.return_id(@player.p1)
 
 %p
+champion:
 %b= @player.c1
 = Player.get_champion_id(@player.p1)
+= image_tag "http://ddragon.leagueoflegends.com/cdn/5.13.1/img/champion/#{@player.c1}.png"
 
 %p
-  In any given ranked game, the probability of
+  The probability of
   %b= @player.p1
   winning with
-  = image_tag "http://ddragon.leagueoflegends.com/cdn/5.13.1/img/champion/#{@player.c1}.png"
   %b= @player.c1
   is
   = Player.determine_champion_probability(@player.p1, @player.c1)
@@ -20,22 +23,22 @@
 
 
 %p
+  player:
   %b= @player.p2
+  id:
   = Player.return_id(@player.p2)
 
 %p
+  champion:
   %b= @player.c2
   = Player.get_champion_id(@player.p2)
+  = image_tag "http://ddragon.leagueoflegends.com/cdn/5.13.1/img/champion/#{@player.c2}.png"
 
   %p
-  In any given ranked game, the probability of
+  The probability of
   %b= @player.p2
   winning with
-  = image_tag "http://ddragon.leagueoflegends.com/cdn/5.13.1/img/champion/#{@player.c2}.png"
   %b= @player.c2
   is
   = Player.determine_champion_probability(@player.p2, @player.c2)
   &#37
-
-  %h2 Search Another Pair?
-  = render 'form'
