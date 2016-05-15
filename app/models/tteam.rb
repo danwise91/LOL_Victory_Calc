@@ -1,7 +1,16 @@
 class Tteam < ActiveRecord::Base
   require 'riotapi'
   before_save :downcase_players
-
+  validates :p1, length: {minimum: 1}
+  validates :p2, length: {minimum: 1}
+  validates :p3, length: {minimum: 1}
+  validates :p4, length: {minimum: 1}
+  validates :p5, length: {minimum: 1}
+  validates :c1, length: {minimum: 1}
+  validates :c2, length: {minimum: 1}
+  validates :c3, length: {minimum: 1}
+  validates :c4, length: {minimum: 1}
+  validates :c5, length: {minimum: 1}
   before_save :mod_champ_save
 
 

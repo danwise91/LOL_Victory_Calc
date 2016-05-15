@@ -1,7 +1,10 @@
 class Player < ActiveRecord::Base
   require 'riotapi'
   before_save :downcase_players
-
+  validates :p1, length: {minimum: 1}
+  validates :p2, length: {minimum: 1}
+  validates :c1, length: {minimum: 1}
+  validates :c2, length: {minimum: 1}
   before_save :mod_champ_save
 
   #returns the player id
