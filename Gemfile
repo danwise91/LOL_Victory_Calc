@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-gem 'rails_12factor', group: :production
+gem 'rails_12factor'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem "httparty"
 gem "figaro"
